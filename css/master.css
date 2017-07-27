@@ -1,0 +1,558 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import url(rwdgrid.css);
+@import url(awesomefont4.4/css/font-awesome.min.css);
+body {
+  background: #dce0e3;
+  font-family: "微軟正黑體";
+  font-size: 18px; }
+
+a {
+  cursor: pointer; }
+
+.wrap {
+  width: 960px;
+  margin: 0 auto; }
+
+.b-box {
+  box-sizing: border-box; }
+
+ul {
+  list-style: none; }
+
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 195px;
+  height: 100%;
+  background: #fff;
+  padding: 15px 0;
+  box-sizing: border-box;
+  box-shadow: 10px 10px 35px rgba(0, 0, 0, 0.11);
+  overflow: scroll;
+  z-index: 100; }
+  header .logo {
+    width: 109px;
+    height: 56px;
+    display: block;
+    margin: 0 auto;
+    background: url(../images/logo.png);
+    background-size: contain;
+    text-indent: -999px; }
+
+ul.menu {
+  margin-top: 30px; }
+  ul.menu a {
+    display: block;
+    padding: 15px 0 15px 48px;
+    color: #656565;
+    font-size: 21px;
+    position: relative;
+    transition: all 0.3s ease; }
+    ul.menu a.home {
+      color: #0d9580; }
+    ul.menu a:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 7px;
+      height: 0;
+      background: #ffea36;
+      transition: all 0.3s ease; }
+    ul.menu a.current, ul.menu a:hover {
+      background: #eeeeee;
+      color: #313131; }
+      ul.menu a.current:after, ul.menu a:hover:after {
+        height: 100%; }
+  ul.menu span {
+    display: block;
+    padding: 15px 0 15px 48px;
+    font-size: 18px;
+    color: #0d9580;
+    position: relative; }
+    ul.menu span.title {
+      font-size: 21px; }
+      ul.menu span.title:after {
+        display: none; }
+    ul.menu span:after {
+      content: "";
+      position: absolute;
+      left: 48px;
+      bottom: 5px;
+      width: 100px;
+      height: 1px;
+      background: #0d9580; }
+    ul.menu span i {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 21px;
+      height: 24px; }
+    ul.menu span .partner {
+      background: url(../images/people.png) left center no-repeat; }
+    ul.menu span .text {
+      background: url(../images/text.png) left center no-repeat; }
+    ul.menu span .farmer {
+      background: url(../images/farmer.png) left center no-repeat; }
+
+.m_menu, .downBox {
+  display: none; }
+
+.mainArea {
+  padding-left: 195px; }
+  .mainArea .titleArea {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 195px;
+    z-index: 99; }
+    .mainArea .titleArea .topBox {
+      background: #27c4ac;
+      padding: 15px 0; }
+      .mainArea .titleArea .topBox input {
+        background: none;
+        border: 1px solid #86ffec;
+        color: #fff;
+        font-size: 16px;
+        padding: 7px 10px;
+        width: 60%;
+        box-sizing: border-box; }
+        .mainArea .titleArea .topBox input:focus {
+          outline: none; }
+      .mainArea .titleArea .topBox input::placeholder {
+        color: #86ffec; }
+      .mainArea .titleArea .topBox .rightBox {
+        float: right; }
+        .mainArea .titleArea .topBox .rightBox span {
+          display: inline-block;
+          vertical-align: bottom; }
+          .mainArea .titleArea .topBox .rightBox span.Img {
+            width: 32px;
+            height: 32px;
+            border-radius: 100%; }
+          .mainArea .titleArea .topBox .rightBox span.name {
+            color: #fff;
+            font-size: 16px;
+            padding-left: 8px; }
+            .mainArea .titleArea .topBox .rightBox span.name i {
+              margin-left: 8px;
+              font-size: 20px;
+              display: inline-block;
+              vertical-align: text-top; }
+        .mainArea .titleArea .topBox .rightBox a {
+          display: inline-block;
+          vertical-align: middle; }
+        .mainArea .titleArea .topBox .rightBox a.mail {
+          width: 24px;
+          height: 24px;
+          background: url(../images/mail.png);
+          margin: 0 24px;
+          position: relative; }
+          .mainArea .titleArea .topBox .rightBox a.mail span.num {
+            position: absolute;
+            right: -5px;
+            top: -5px;
+            width: 16px;
+            height: 16px;
+            text-align: center;
+            line-height: 16px;
+            border-radius: 100%;
+            color: #fff;
+            background: #f66060;
+            font-size: 12px; }
+        .mainArea .titleArea .topBox .rightBox a.login {
+          width: 27px;
+          height: 24px;
+          background: url(../images/login01.png); }
+    .mainArea .titleArea .titleBox {
+      background: #fff;
+      padding: 14px 0;
+      box-shadow: 10px 10px 35px rgba(0, 0, 0, 0.11); }
+      .mainArea .titleArea .titleBox h2 {
+        font-size: 24px;
+        color: #434343;
+        font-weight: normal;
+        display: inline-block; }
+      .mainArea .titleArea .titleBox a.btn {
+        display: inline-block;
+        float: right;
+        font-size: 21px;
+        color: #fff;
+        padding: 0 18px;
+        line-height: 44px;
+        background: #b5b5b5; }
+        .mainArea .titleArea .titleBox a.btn:hover {
+          background: #27c4ac; }
+  .mainArea .contentBox {
+    padding: 180px 0 25px 0; }
+    .mainArea .contentBox .block {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 8px; }
+      .mainArea .contentBox .block ul {
+        margin: 0 -10px; }
+        .mainArea .contentBox .block ul .people {
+          padding: 0 10px; }
+          .mainArea .contentBox .block ul .people .item {
+            padding: 20px;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15), -2px -2px 4px rgba(0, 0, 0, 0.05); }
+          .mainArea .contentBox .block ul .people h3 {
+            font-size: 18px;
+            color: #0d9580;
+            font-weight: normal; }
+          .mainArea .contentBox .block ul .people span {
+            display: block;
+            color: #707070;
+            font-size: 18px;
+            text-align: right; }
+            .mainArea .contentBox .block ul .people span.num {
+              text-align: center;
+              font-size: 36px;
+              line-height: 1.2; }
+          .mainArea .contentBox .block ul .people p {
+            text-align: right; }
+            .mainArea .contentBox .block ul .people p span {
+              display: inline-block; }
+              .mainArea .contentBox .block ul .people p span.num {
+                width: 80px;
+                padding: 0 10px;
+                line-height: 0.8;
+                text-align: right; }
+            .mainArea .contentBox .block ul .people p i {
+              width: 30px;
+              height: 28px;
+              display: inline-block; }
+          .mainArea .contentBox .block ul .people p.family i {
+            background: url(../images/family.png) right center no-repeat; }
+          .mainArea .contentBox .block ul .people p.company i {
+            background: url(../images/company.png) right center no-repeat; }
+      .mainArea .contentBox .block span.option {
+        display: inline-block;
+        position: relative;
+        margin-right: 15px; }
+        .mainArea .contentBox .block span.option select, .mainArea .contentBox .block span.option input {
+          background: none;
+          border: 1px solid #b5b5b5;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          border-radius: 0;
+          font-size: 18px;
+          color: #a0a0a0;
+          width: 175px;
+          box-sizing: border-box;
+          padding-right: 20px;
+          line-height: 44px;
+          text-align-last: center;
+          cursor: pointer; }
+        .mainArea .contentBox .block span.option i {
+          position: absolute;
+          right: 8px;
+          top: 12px;
+          font-size: 22px;
+          color: #a0a0a0; }
+      .mainArea .contentBox .block .date, .mainArea .contentBox .block .right {
+        display: inline-block;
+        float: right; }
+        .mainArea .contentBox .block .date span.option, .mainArea .contentBox .block .right span.option {
+          margin: 0 3px; }
+        .mainArea .contentBox .block .date b, .mainArea .contentBox .block .right b {
+          font-size: 18px;
+          color: #707070;
+          font-weight: normal; }
+      .mainArea .contentBox .block a.submit, .mainArea .contentBox .block a.btn {
+        display: inline-block;
+        line-height: 44px;
+        border: 1px solid #13b59c;
+        color: #13b59c;
+        font-size: 21px;
+        padding: 0 13px;
+        margin-left: 15px; }
+        .mainArea .contentBox .block a.submit:hover, .mainArea .contentBox .block a.btn:hover {
+          background: #13b59c;
+          color: #fff; }
+      .mainArea .contentBox .block a.office {
+        margin-right: 15px; }
+      .mainArea .contentBox .block a.btn {
+        letter-spacing: 2px; }
+        .mainArea .contentBox .block a.btn:hover {
+          background: #13b59c;
+          color: #fff; }
+      .mainArea .contentBox .block a.btn.current {
+        background: #13b59c;
+        color: #fff; }
+      .mainArea .contentBox .block ul.work {
+        margin: 20px -10px 0 -10px; }
+        .mainArea .contentBox .block ul.work li {
+          padding: 0 10px; }
+        .mainArea .contentBox .block ul.work .item {
+          background: #eeeeee;
+          padding: 30px 0 30px 20px;
+          box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15), -2px -2px 4px rgba(0, 0, 0, 0.05); }
+        .mainArea .contentBox .block ul.work .Img {
+          display: inline-block;
+          padding-right: 18px; }
+        .mainArea .contentBox .block ul.work .Txt {
+          display: inline-block;
+          vertical-align: top; }
+          .mainArea .contentBox .block ul.work .Txt span {
+            display: block;
+            font-size: 24px;
+            color: #707070;
+            line-height: 1; }
+            .mainArea .contentBox .block ul.work .Txt span.num {
+              font-size: 30px;
+              color: #27c4ac;
+              margin-bottom: 15px; }
+      .mainArea .contentBox .block ul.result {
+        margin-top: 80px;
+        padding-bottom: 30px; }
+        .mainArea .contentBox .block ul.result p {
+          font-size: 21px;
+          color: #707070;
+          margin-bottom: 10px; }
+          .mainArea .contentBox .block ul.result p.result01 {
+            margin-bottom: 36px; }
+
+@media (max-width: 1180px) {
+  header,
+  .mainArea .titleArea .topBox {
+    display: none; }
+  .mainArea,
+  .mainArea .titleArea {
+    padding-left: 0; }
+  .wrap {
+    width: 100%;
+    padding: 0 20px; }
+  .m_menu {
+    display: block; }
+    .m_menu .controlBox {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 60px;
+      z-index: 101;
+      background: #fff;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.11); }
+      .m_menu .controlBox a.main {
+        display: inline-block;
+        vertical-align: top;
+        padding: 0 15px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 18px;
+        color: #0d9580; }
+      .m_menu .controlBox .m_logo {
+        display: inline-block;
+        width: 100px;
+        margin-top: 5px; }
+        .m_menu .controlBox .m_logo img {
+          width: 100%;
+          display: block; }
+      .m_menu .controlBox .right {
+        display: inline-block;
+        float: right;
+        padding: 15px 10px 0 0; }
+        .m_menu .controlBox .right a {
+          display: inline-block;
+          vertical-align: top; }
+          .m_menu .controlBox .right a span {
+            display: inline-block;
+            vertical-align: middle;
+            color: #707070;
+            font-size: 14px; }
+        .m_menu .controlBox .right a.m_search {
+          font-size: 20px;
+          margin-right: 10px;
+          color: #2fa492; }
+        .m_menu .controlBox .right a.mail {
+          width: 24px;
+          height: 24px;
+          background: url(../images/mail_m.png);
+          margin: 5px 15px 0 15px;
+          position: relative; }
+          .m_menu .controlBox .right a.mail span.num {
+            position: absolute;
+            right: -5px;
+            top: -5px;
+            width: 16px;
+            height: 16px;
+            text-align: center;
+            line-height: 16px;
+            border-radius: 100%;
+            color: #fff;
+            background: #f66060;
+            font-size: 12px; }
+        .m_menu .controlBox .right a.login {
+          width: 27px;
+          height: 24px;
+          margin-top: 5px;
+          background: url(../images/login_m.png); }
+    .m_menu .hideBox {
+      position: fixed;
+      top: 0;
+      left: -195px;
+      background: #fff;
+      width: 195px;
+      height: 100%;
+      padding-top: 60px;
+      overflow: scroll;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.11);
+      z-index: 100;
+      transition: all 0.3s ease;
+      box-sizing: border-box; }
+    .m_menu .mask {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 99;
+      display: none;
+      transition: all 0.3s ease; }
+    .m_menu .searchBox {
+      position: absolute;
+      left: 0;
+      top: 60px;
+      width: 100%;
+      background: #27c4ac;
+      padding: 10px;
+      box-sizing: border-box;
+      opacity: 0;
+      margin-top: 60px;
+      transition: all 0.3s ease; }
+    .m_menu .searchBox.active {
+      margin-top: 0;
+      opacity: 1; }
+      .m_menu .searchBox.active input {
+        background: none;
+        border: 1px solid #86ffec;
+        color: #fff;
+        font-size: 16px;
+        padding: 7px 10px;
+        width: 100%;
+        box-sizing: border-box; }
+        .m_menu .searchBox.active input:focus {
+          outline: none; }
+      .m_menu .searchBox.active input::placeholder {
+        color: #86ffec; }
+  .m_menu.active .hideBox {
+    left: 0; }
+  .m_menu.active .mask {
+    display: block; }
+  .mainArea {
+    padding-top: 60px; }
+    .mainArea .titleArea {
+      position: static; }
+    .mainArea .contentBox {
+      padding: 50px 0 80px 0; } }
+
+@media (max-width: 1024px) {
+  .mainArea .contentBox .block ul .people {
+    padding: 10px; }
+    .mainArea .contentBox .block ul .people p {
+      text-align: center; }
+      .mainArea .contentBox .block ul .people p span {
+        float: right; }
+        .mainArea .contentBox .block ul .people p span.num {
+          float: none; }
+  .mainArea .contentBox .block ul.work li {
+    padding: 10px; }
+  .mainArea .contentBox .block ul.work .item {
+    text-align: center;
+    padding: 30px 10px; }
+  .mainArea .contentBox .block ul.result li {
+    text-align: center; } }
+
+@media (max-width: 960px) {
+  .mainArea .contentBox .block .date, .mainArea .contentBox .block .right {
+    display: block;
+    float: none;
+    text-align: center;
+    margin-top: 15px; }
+  form {
+    text-align: center; } }
+
+@media (max-width: 767px) {
+  .mainArea .contentBox .block span.option {
+    display: block;
+    margin: 0 0 15px 0; }
+    .mainArea .contentBox .block span.option select, .mainArea .contentBox .block span.option input {
+      width: 100%;
+      padding: 0 20px; }
+  .mainArea .contentBox .block .date span.option, .mainArea .contentBox .block .right span.option {
+    margin: 5px 0; }
+  .mainArea .contentBox .block a.submit {
+    margin-top: 10px; } }
+
+@media (max-width: 767px) {
+  .mainArea .contentBox .block ul.result li img {
+    width: 100%; }
+  .m_menu .controlBox .right a.mail,
+  .m_menu .controlBox .right a.login {
+    display: none; }
+  .downBox {
+    display: block;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background: #27c4ac;
+    z-index: 50; }
+    .downBox a {
+      width: 33.33%;
+      display: inline-block;
+      float: left;
+      text-align: center;
+      padding: 6px 0;
+      position: relative; }
+      .downBox a:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 1px;
+        height: 100%;
+        background: #86ffec; }
+      .downBox a i {
+        color: #fff;
+        font-size: 22px; }
+      .downBox a b {
+        display: block;
+        color: #fff;
+        font-size: 13px;
+        line-height: 1; }
+    .downBox a.gotop:after {
+      display: none; }
+    .downBox a.mail i {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      background: url(../images/mail.png);
+      background-size: contain;
+      position: relative; }
+      .downBox a.mail i span.num {
+        position: absolute;
+        right: -5px;
+        top: -5px;
+        width: 16px;
+        height: 16px;
+        text-align: center;
+        line-height: 16px;
+        border-radius: 100%;
+        color: #fff;
+        background: #f66060;
+        font-size: 12px; }
+    .downBox a.login i {
+      width: 20px;
+      height: 19px;
+      display: inline-block;
+      background: url(../images/login01.png);
+      background-size: contain; } }
