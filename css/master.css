@@ -249,6 +249,7 @@ ul.menu {
           line-height: 44px;
           text-align-last: center;
           -moz-text-align-last: center;
+          text-align: justify;
           cursor: pointer; }
         .mainArea .contentBox .block span.option i {
           position: absolute;
