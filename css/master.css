@@ -453,7 +453,7 @@ ul.menu {
     .mainArea .titleArea {
       position: static; }
     .mainArea .contentBox {
-      padding: 50px 0 80px 0; } }
+      padding: 50px 0 25px 0; } }
 
 @media (max-width: 1024px) {
   .mainArea .contentBox .block ul .people {
@@ -499,6 +499,8 @@ ul.menu {
   .m_menu .controlBox .right a.mail,
   .m_menu .controlBox .right a.login {
     display: none; }
+  .mainArea .contentBox {
+      padding: 50px 0 80px 0; }
   .downBox {
     display: block;
     position: fixed;
